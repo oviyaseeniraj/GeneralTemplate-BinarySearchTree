@@ -13,8 +13,8 @@ class GenBST {
 
  public:
     // ctor, dtor, insert and one print method already done in intbst.cpp:
-    GenBST();                   // constructor
-    ~GenBST();                  // destructor
+    GenBST<T>();                   // constructor
+    ~GenBST<T>();                  // destructor
     bool insert(T value);     // insert value; return false if duplicate
     void printPreOrder() const; // prints tree data pre-order to cout
 
@@ -33,7 +33,7 @@ class GenBST {
  private:
 
     struct Node {
-	int info;
+	T info;
 	Node *left, *right, * parent;
 	// useful constructor:
     Node(T v=0) : info(v), left(0), right(0), parent(0) { }

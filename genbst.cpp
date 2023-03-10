@@ -2,7 +2,6 @@
 // Implements class GenBST
 // Oviya Seeniraj, 3/1/23
 
-#include "genbst.h"
 #include <iostream>
 using std::cout;
 
@@ -40,7 +39,8 @@ template<typename T> bool GenBST<T>::insert(T value)
 }
 
 // recursive helper for insert (assumes n is never 0)
-template<typename T> bool GenBST<T>::insert(T value, Node *n)
+template<typename T>
+bool GenBST<T>::insert(T value, Node *n)
 {
     // base case:
     if (n == nullptr)
@@ -213,7 +213,7 @@ bool GenBST<T>::contains(T value) const
 
 // returns the Node containing the predecessor of the given value
 template<typename T>
-GenBST<T>::Node *GenBST<T>::getPredecessorNode(T value) const
+typename GenBST<T>::Node *GenBST<T>::getPredecessorNode(T value) const
 {
     if (count() == 0 || count() == 1)
     {
@@ -272,7 +272,7 @@ T GenBST<T>::getPredecessor(T value) const
 
 // returns the Node containing the successor of the given value
 template<typename T>
-GenBST<T>::Node *GenBST<T>::getSuccessorNode(T value) const
+typename GenBST<T>::Node *GenBST<T>::getSuccessorNode(T value) const
 {
     if (count() == 0 || count() == 1)
     {

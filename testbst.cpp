@@ -13,7 +13,7 @@ int getTest();
 
 int main()
 {
-    GenBST<T> bst1, bst2;
+    GenBST<int> bst1, bst2;
 
     // insert data to bst1
     bst1.insert(64);
