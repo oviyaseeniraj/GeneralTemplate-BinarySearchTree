@@ -267,11 +267,8 @@ T GenBST<T>::getPredecessor(T value) const
     {
         return getPredecessorNode(value)->info;
     }
-
-    if (typeid(value).name() == "string")
-        return "";
     
-    return 0;
+    return {};
 }
 
 // returns the Node containing the successor of the given value
@@ -334,11 +331,8 @@ T GenBST<T>::getSuccessor(T value) const
     {
         return getSuccessorNode(value)->info;
     }
-
-    if (typeid(value).name() == "string")
-        return "";
     
-    return 0;
+    return {};
 }
 
 // deletes the Node containing the given value from the tree
