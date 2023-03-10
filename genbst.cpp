@@ -3,6 +3,7 @@
 // Oviya Seeniraj, 3/1/23
 
 #include <iostream>
+#include <typeinfo>
 using std::cout;
 
 // constructor sets up empty tree
@@ -267,6 +268,9 @@ T GenBST<T>::getPredecessor(T value) const
         return getPredecessorNode(value)->info;
     }
 
+    if (typeid(value).name() == "string")
+        return "";
+    
     return 0;
 }
 
@@ -331,6 +335,9 @@ T GenBST<T>::getSuccessor(T value) const
         return getSuccessorNode(value)->info;
     }
 
+    if (typeid(value).name() == "string")
+        return "";
+    
     return 0;
 }
 
